@@ -1,0 +1,28 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  html {
+    font-size: 62.5%; //1rem = 10px; 10/16 = 62.5%
+  }
+  
+  body {
+    color: $color-dark-3;
+    font-family: Open Sans;
+    font-size: 1.6rem;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+  }
