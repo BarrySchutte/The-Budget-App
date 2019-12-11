@@ -95,8 +95,10 @@
   background-color: $color-light-2;
 
   &__container {
-    margin: 0 auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__type {
@@ -132,15 +134,16 @@
   }
 
   &__btn {
-    font-size: 3.5rem;
     background: none;
     border: none;
-    color: $color-blue;
     cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.1;
     margin-left: 1rem;
+
+    &-img {
+      width: 3rem;
+      height: 3rem;
+      fill: $color-red !important;
+    }
   }
 
   &__btn:active {

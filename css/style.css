@@ -95,8 +95,10 @@ body {
   border-bottom: 1px solid #e7e7e7;
   background-color: #f7f7f7; }
   .add__container {
-    margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .add__type {
     width: 5.5rem;
     border: 1px solid #e7e7e7;
@@ -122,15 +124,14 @@ body {
   .add__value {
     width: 10rem; }
   .add__btn {
-    font-size: 3.5rem;
     background: none;
     border: none;
-    color: #28b9b5;
     cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.1;
     margin-left: 1rem; }
+    .add__btn-img {
+      width: 3rem;
+      height: 3rem;
+      fill: #ff5049 !important; }
   .add__btn:active {
     transform: translateY(2px); }
   .add__type:focus, .add__description:focus, .add__value:focus {
