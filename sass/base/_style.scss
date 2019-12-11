@@ -78,17 +78,11 @@
   }
 }
 
-.right {
-  float: right;
-}
+.right {float: right;}
 
-.red {
-  color: $color-red;
+.red {color: $color-red !important;}
 
-  &:focus {
-    border: 1px solid $color-red !important;
-  }
-}
+.red-focus:focus {border: 1px solid $color-red !important;}
 
 /**********************************************
   *** BOTTOM PART

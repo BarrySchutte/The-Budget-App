@@ -81,9 +81,10 @@ body {
   float: right; }
 
 .red {
-  color: #ff5049; }
-  .red:focus {
-    border: 1px solid #ff5049 !important; }
+  color: #ff5049 !important; }
+
+.red-focus:focus {
+  border: 1px solid #ff5049 !important; }
 
 /**********************************************
   *** BOTTOM PART
