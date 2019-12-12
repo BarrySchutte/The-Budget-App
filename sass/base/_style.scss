@@ -4,7 +4,11 @@
 
 .top {
   height: 40vh;
-  background-image: linear-gradient(rgba($color-dark, 0.35),rgba($color-dark, 0.35)),url(../img/back.png);
+  background-image: linear-gradient(
+      rgba($color-dark, 0.35),
+      rgba($color-dark, 0.35)
+    ),
+    url(../img/back.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -80,11 +84,17 @@
   }
 }
 
-.right {display: flex;}
+.right {
+  display: flex;
+}
 
-.red {color: $color-red !important;}
+.red {
+  color: $color-red !important;
+}
 
-.red-focus:focus {border: 1px solid $color-red !important;}
+.red-focus:focus {
+  border: 1px solid $color-red !important;
+}
 
 /**********************************************
   *** BOTTOM PART
@@ -226,17 +236,18 @@ h2 {
   }
 
   &__value {
-    transition: transform 0.3s;
+    transition: transform 0.2s;
   }
 
   &__percentage {
-    margin-left: 2rem;
-    transition: transform 0.3s;
+    margin-left: 1rem;
+    transition: transform 0.2s;
     font-size: 1.1rem;
     background-color: $color-red-light;
     padding: 3px;
     border-radius: 3px;
     text-align: center;
+    width: 4.5rem;
   }
 
   &__delete {
@@ -282,12 +293,11 @@ h2 {
   }
 }
 
-
 @media only screen and (max-width: 600px) {
   html {
     font-size: 55%;
   }
-  
+
   .container {
     width: 98%;
   }
@@ -312,7 +322,7 @@ h2 {
   .income__title,
   .expenses__title {
     text-align: center;
-    margin: .5rem auto 2rem auto;
+    margin: 0.5rem auto 2rem auto;
   }
 
   .budget__value {
@@ -349,6 +359,34 @@ h2 {
     margin-right: 0;
     order: 3;
     font-size: 3rem;
-    transform: translateY(.5rem) translateX(-1rem);
+    transform: translateY(0.5rem) translateX(-1rem);
+  }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 900px) and (orientation: landscape) {
+  .top {
+    height: 60vh;
+  }
+
+  .budget {
+    padding: 1rem;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__value {
+      font-size: 3rem;
+    }
+
+    &__income,
+    &__expenses {
+      padding: .5rem;
+    }
+  }
+
+  .income__title,
+  .expenses__title {
+    text-align: center;
   }
 }
