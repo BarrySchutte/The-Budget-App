@@ -55,7 +55,7 @@ body {
     text-transform: uppercase; }
   .budget__income {
     margin-bottom: 1rem;
-    background-color: #28b9b5;
+    background-color: #4cd137;
     display: flex;
     justify-content: flex-end; }
   .budget__expenses {
@@ -127,7 +127,7 @@ body {
     width: 10rem; }
   .add__btn {
     font-size: 2rem;
-    color: #28b9b5;
+    color: #4cd137;
     background: none;
     border: none;
     cursor: pointer;
@@ -136,24 +136,27 @@ body {
     transform: translateY(2px); }
   .add__type:focus, .add__description:focus, .add__value:focus {
     outline: none;
-    border: 1px solid #28b9b5; }
+    border: 1px solid #4cd137; }
   .add__btn:focus {
     outline: none; }
+  .add__type {
+    border-radius: 5px; }
 
 /***** LISTS *****/
 .container {
-  width: 100rem;
+  width: 90%;
   margin: 6rem auto;
-  display: flex; }
+  display: flex;
+  justify-content: center; }
 
 .income {
   width: 47.5rem;
   margin-right: 5rem; }
   .income__title {
-    color: #28b9b5; }
+    color: #4cd137; }
   .income .item__value,
   .income .item__delete--btn {
-    color: #28b9b5; }
+    color: #4cd137; }
 
 .expenses {
   width: 47.5rem; }
@@ -220,3 +223,47 @@ h2 {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
   .unpaid:hover .item__description {
     font-weight: 900; }
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 55%; }
+  .container {
+    width: 98%; } }
+
+@media only screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    margin: 1rem auto; }
+  .income {
+    margin-bottom: 5rem;
+    min-height: 10vh; }
+  .income,
+  .expenses {
+    width: 100%; }
+  .income__title,
+  .expenses__title {
+    text-align: center;
+    margin: .5rem auto 2rem auto; }
+  .budget__value {
+    font-size: 2.5rem; }
+  .add__btn {
+    margin-right: 1rem; } }
+
+@media only screen and (max-width: 350px) {
+  .add__container {
+    flex-wrap: wrap; }
+  .add__description {
+    order: 1; }
+  .add__description,
+  .add__value,
+  .add__type,
+  .add__btn {
+    width: 45%; }
+  .add__type {
+    order: 2;
+    margin-top: 1rem; }
+  .add__btn {
+    margin-right: 0;
+    order: 3;
+    font-size: 3rem;
+    transform: translateY(0.5rem) translateX(-1rem); } }
