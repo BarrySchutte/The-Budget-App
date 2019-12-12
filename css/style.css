@@ -55,19 +55,21 @@ body {
     text-transform: uppercase; }
   .budget__income {
     margin-bottom: 1rem;
-    background-color: #28b9b5; }
+    background-color: #28b9b5;
+    display: flex;
+    justify-content: flex-end; }
   .budget__expenses {
-    background-color: #ff5049; }
+    background-color: #ff5049;
+    display: flex;
+    justify-content: flex-end; }
   .budget__income--text, .budget__expenses--text {
-    float: left;
     font-size: 1.3rem;
     color: #444;
-    margin-top: 2px; }
+    margin-top: 2px;
+    margin-right: auto; }
   .budget__income--value, .budget__expenses--value {
-    letter-spacing: 1px;
-    float: left; }
+    letter-spacing: 1px; }
   .budget__income--percentage, .budget__expenses--percentage {
-    float: left;
     width: 3.4rem;
     font-size: 1.1rem;
     padding: 3px 0;
@@ -78,7 +80,7 @@ body {
     border-radius: 3px; }
 
 .right {
-  float: right; }
+  display: flex; }
 
 .red {
   color: #ff5049 !important; }
@@ -124,14 +126,12 @@ body {
   .add__value {
     width: 10rem; }
   .add__btn {
+    font-size: 2rem;
+    color: #28b9b5;
     background: none;
     border: none;
     cursor: pointer;
     margin-left: 1rem; }
-    .add__btn-img {
-      width: 3rem;
-      height: 3rem;
-      fill: #ff5049 !important; }
   .add__btn:active {
     transform: translateY(2px); }
   .add__type:focus, .add__description:focus, .add__value:focus {
@@ -143,10 +143,10 @@ body {
 /***** LISTS *****/
 .container {
   width: 100rem;
-  margin: 6rem auto; }
+  margin: 6rem auto;
+  display: flex; }
 
 .income {
-  float: left;
   width: 47.5rem;
   margin-right: 5rem; }
   .income__title {
@@ -156,7 +156,6 @@ body {
     color: #28b9b5; }
 
 .expenses {
-  float: left;
   width: 47.5rem; }
   .expenses__title {
     color: #ff5049; }
@@ -173,18 +172,19 @@ h2 {
 
 .item {
   padding: 1.3rem;
-  border-bottom: 1px solid #e7e7e7; }
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
   .item:first-child {
     border-top: 1px solid #e7e7e7; }
   .item:nth-child(even) {
     background-color: #f7f7f7; }
   .item__description {
-    float: left; }
+    margin-right: auto; }
   .item__value {
-    float: left;
     transition: transform 0.3s; }
   .item__percentage {
-    float: left;
     margin-left: 2rem;
     transition: transform 0.3s;
     font-size: 1.1rem;
@@ -194,15 +194,12 @@ h2 {
     width: 3.2rem;
     text-align: center; }
   .item__delete {
-    float: left; }
+    display: flex; }
   .item__delete--btn {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     background: none;
     border: none;
     cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1;
     display: none; }
   .item__delete--btn:focus {
     outline: none; }
@@ -211,9 +208,9 @@ h2 {
   .item:hover .item__delete--btn {
     display: block; }
   .item:hover .item__value {
-    transform: translateX(-2rem); }
+    transform: translateX(-1.5rem); }
   .item:hover .item__percentage {
-    transform: translateX(-2rem); }
+    transform: translateX(-1.5rem); }
 
 .unpaid {
   background-color: #ffdad9 !important;
