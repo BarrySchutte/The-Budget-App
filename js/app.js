@@ -165,10 +165,7 @@ const UIController = (function() {
     if (int.length > 3 && int.length < 7) {
       int = `${int.substr(0, int.length - 3)},${int.substr(int.length - 3, 3)}`;
     } else if (int.length >= 7) {
-      int = `${int.substr(0, int.length - 6)},${int.substr(
-        int.length - 6,
-        3
-      )},${int.substr(int.length - 6, 3)}`; // Millions
+      int = `${int.substr(0, int.length - 6)},${int.substr(int.length - 6, 3)},${int.substr(int.length - 3, 3)}`; // Millions 1,000,000.00
     }
 
     dec = numSplit[1];
