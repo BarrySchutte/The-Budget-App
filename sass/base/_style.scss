@@ -3,7 +3,8 @@
   **********************************************/
 
 .top {
-  height: 40vh;
+  display: flex;
+  justify-content: center;
   background-image: linear-gradient(
       rgba($color-dark, 0.35),
       rgba($color-dark, 0.35)
@@ -11,16 +12,13 @@
     url(../img/back.png);
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
 .budget {
-  position: absolute;
-  width: 35rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 5rem 0;
   color: $color-light;
+  display: flex;
+  flex-direction: column;
 
   &__title {
     font-size: 1.8rem;
@@ -343,16 +341,20 @@ h2 {
     order: 1;
   }
 
+  .add__value {
+    order: 2;
+  }
+
+  .add__type {
+    order: 3;
+    margin-top: 1rem;
+  }
+
   .add__description,
   .add__value,
   .add__type,
   .add__btn {
     width: 45%;
-  }
-
-  .add__type {
-    order: 2;
-    margin-top: 1rem;
   }
 
   .add__btn {
@@ -364,10 +366,6 @@ h2 {
 }
 
 @media only screen and (min-device-width: 480px) and (max-device-width: 900px) and (orientation: landscape) {
-  .top {
-    height: 100%;
-  }
-
   .budget {
     padding: 1rem;
 
@@ -383,10 +381,5 @@ h2 {
     &__expenses {
       padding: .5rem;
     }
-  }
-
-  .income__title,
-  .expenses__title {
-    text-align: center;
   }
 }
